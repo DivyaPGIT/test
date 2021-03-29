@@ -1,3 +1,3 @@
 # test
-test repo for demo
+test repo for demo purpose
 
