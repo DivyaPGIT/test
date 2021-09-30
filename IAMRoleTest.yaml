@@ -1,6 +1,9 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Description: Template to create IAM Role for lambda , FTP user and its inline policies.
-
+Parameters:
+ Lambdarole:
+  Type: String
+  Default: Lambdarolefortest
 Resources:
   IAMRole:
     Type: AWS::IAM::Role
@@ -27,4 +30,4 @@ Resources:
             Resource: arn:aws:logs:*:*:*
             Effect: Allow
 
-      RoleName: consumer-video-statement-lambda-iam-role
+      RoleName: !Ref Lambdarole
